@@ -1,0 +1,20 @@
+.github-link {
+  margin-bottom: 20px;
+}
+
+.github-link a {
+  display: inline-block;
+  color: var(--card-background);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 14px 32px;
+  background-color: var(--accent-color); /* Changed to accent color */
+  border-radius: 30px;
+  transition: var(--transition);
+}
+
+.github-link a:hover {
+  background-color: #c0392b; /* Darker shade of the accent color */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(231, 76, 60, 0.3);
+}

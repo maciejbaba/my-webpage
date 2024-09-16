@@ -1,0 +1,10 @@
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info strong {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 10px;
+}
