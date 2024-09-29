@@ -9,6 +9,70 @@
   --transition: all 0.3s ease;
 }
 
+[data-theme="dark"] {
+  --background-color: #181818;
+  --text-color: #f5f5f5;
+  --link-color: #9acdff;
+  --header-bg-color: #202020;
+  --project-bg-color: #2a2a2a;
+}
+
+a {
+  color: var(--link-color);
+}
+
+.project {
+  background-color: var(--project-bg-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar (horizontal) */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0; /* Light background for the track */
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid #ccc; /* Optional border for definition */
+}
+
+/* Handle (draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Darker color for the scrollbar handle */
+  border-radius: 10px; /* Rounded handle */
+  border: 3px solid #f0f0f0; /* Adds padding around the thumb and aligns with track */
+}
+
+/* Handle hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color when hovered */
+}
+
+/* Handle when active (clicked) */
+::-webkit-scrollbar-thumb:active {
+  background-color: #333; /* Even darker when active */
+}
+
+/* Optional horizontal scrollbar customization */
+::-webkit-scrollbar-horizontal {
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb-horizontal {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb-horizontal:hover {
+  background-color: #555;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -71,6 +135,11 @@ p {
 
 ul {
   list-style-position: inside; /* Inside makes the bullet points appear inside the list instead of outside */
+}
+
+iframe {
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
