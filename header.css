@@ -1,5 +1,5 @@
 header {
-  background-color: var(--header-bg-color);
+  background-color: var(--primary-color);
   color: var(--card-background);
   padding: 60px 20px;
   text-align: center;
