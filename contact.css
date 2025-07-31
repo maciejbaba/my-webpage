@@ -1,10 +1,329 @@
-.contact-info {
-  margin-bottom: 20px;
+/* Modern Contact Section */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.contact-info strong {
+.contact-text {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.contact-text h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contact-text p {
   font-size: 1.2rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Contact Methods */
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  group: true;
+}
+
+.contact-method::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: all var(--transition-normal);
+  z-index: 1;
+}
+
+.contact-method:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.contact-method:hover::before {
+  opacity: 0.1;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  font-size: 1.5rem;
+  transition: all var(--transition-normal);
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.contact-method:hover .contact-icon {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-glow);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.contact-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--transition-normal);
+}
+
+.contact-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: all var(--transition-normal);
+}
+
+.contact-method:hover .contact-label {
+  color: var(--primary-color);
+}
+
+.contact-method:hover .contact-value {
+  color: var(--primary-color);
+}
+
+/* CTA Button for GitHub section */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-2xl);
+  background: var(--gradient-primary);
+  color: var(--text-white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-top: var(--space-lg);
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all var(--transition-slow);
+}
+
+.cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  background: var(--gradient-secondary);
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+.cta-button i:first-child {
+  font-size: 1.2rem;
+}
+
+.cta-button i:last-child {
+  transition: all var(--transition-normal);
+}
+
+.cta-button:hover i:last-child {
+  transform: translateX(4px);
+}
+
+/* GitHub Content */
+.github-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.github-stats h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.github-stats p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-xl);
+}
+
+/* Legacy Contact Info Support */
+.contact-info.legacy {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.contact-info.legacy strong {
+  font-size: 1.3rem;
   color: var(--primary-color);
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: var(--space-md);
+  font-weight: 600;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-normal);
+}
+
+.contact-info.legacy strong:hover {
+  background: var(--primary-color);
+  color: var(--text-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-content {
+    gap: var(--space-xl);
+  }
+  
+  .contact-text h3 {
+    font-size: 1.6rem;
+  }
+  
+  .contact-text p {
+    font-size: 1.1rem;
+  }
+  
+  .contact-methods {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .contact-method {
+    padding: var(--space-lg);
+  }
+  
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+  
+  .contact-value {
+    font-size: 1rem;
+  }
+  
+  .cta-button {
+    padding: var(--space-md) var(--space-xl);
+    font-size: 1rem;
+  }
+  
+  .github-stats h3 {
+    font-size: 1.5rem;
+  }
+  
+  .github-stats p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-text h3 {
+    font-size: 1.4rem;
+  }
+  
+  .contact-method {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-md);
+  }
+  
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .cta-button {
+    padding: var(--space-md);
+    gap: var(--space-sm);
+  }
+  
+  .cta-button span {
+    display: none;
+  }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .contact-method::before {
+  background: var(--gradient-secondary);
+}
+
+[data-theme="dark"] .contact-icon {
+  background: var(--gradient-secondary);
+}
+
+/* Animation classes */
+.contact-method.animate {
+  animation: scaleIn 0.6s ease-out;
+}
+
+.contact-method:nth-child(2).animate {
+  animation-delay: 0.2s;
+}
+
+.cta-button.animate {
+  animation: fadeInUp 0.8s ease-out;
 }
