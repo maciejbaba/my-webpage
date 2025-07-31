@@ -11,146 +11,382 @@
     <link rel="stylesheet" href="projects.css" />
     <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="github.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
-    <header>
-      <img
-        class="github-image"
-        src="https://avatars.githubusercontent.com/u/81487891?v=4"
-      />
-      <h1>Maciej Bąba</h1>
-      <p>Full Stack Developer</p>
-      <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="#github">GitHub</a>
-      </nav>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
+      </div>
+    </div>
+
+    <header class="modern-header">
+      <div class="header-content">
+        <div class="profile-section">
+          <div class="profile-image-container">
+            <img
+              class="profile-image"
+              src="https://avatars.githubusercontent.com/u/81487891?v=4"
+              alt="Maciej Bąba"
+            />
+            <div class="profile-ring"></div>
+          </div>
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="text-gradient">Maciej Bąba</span>
+            </h1>
+            <p class="hero-subtitle typing-animation">Full Stack Developer</p>
+            <p class="hero-description">
+              Crafting digital experiences with modern technologies and innovative solutions
+            </p>
+          </div>
+        </div>
+        
+        <nav class="modern-nav">
+          <a href="#about" class="nav-link">
+            <i class="fas fa-user"></i>
+            <span>About</span>
+          </a>
+          <a href="#skills" class="nav-link">
+            <i class="fas fa-code"></i>
+            <span>Skills</span>
+          </a>
+          <a href="#projects" class="nav-link">
+            <i class="fas fa-rocket"></i>
+            <span>Projects</span>
+          </a>
+          <a href="#contact" class="nav-link">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+          <a href="#github" class="nav-link">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </nav>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-text">Scroll to explore</div>
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
     </header>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hi, I'm a full-stack developer specializing in building web applications
-        and automation solutions. With expertise in both front-end and back-end
-        development, I deliver optimized, scalable solutions to meet client
-        needs.
-      </p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-
-      <!-- CMS Project -->
-      <div class="project">
-        <h3>CMS Project</h3>
-        <p>
-          Developed a comprehensive Content Management System (CMS) showcasing
-          full-stack development skills. The project features a Laravel backend,
-          Filament-powered admin panel, and a React frontend using Inertia.js.
-        </p>
-        <p>
-          Use email <strong>test@admin.com</strong> and
-          <strong>testtest</strong> password for full access to the app
-        </p>
-        <h4>Key Features:</h4>
-        <ul>
-          <li>Seamless integration of Laravel backend with React frontend</li>
-          <li>Efficient admin panel powered by Filament</li>
-          <li>Modern, responsive UI using shadcn/ui components</li>
-          <li>Type-safe frontend development with TypeScript</li>
-        </ul>
-        <h4>Tech Stack:</h4>
-        <p>Laravel, Filament, React, Inertia.js, Vite, TypeScript, PHP</p>
-        <div class="iframe-preview">
-          <iframe
-            src="https://cms.maciejbaba.dev"
-            width="100%"
-            height="600"
-            scrolling="no"
-          ></iframe>
+    <main class="main-content">
+      <section id="about" class="glass-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-number">01.</span>
+            About Me
+          </h2>
         </div>
-        <div class="github-link">
-          <a href="https://github.com/maciejbaba/cms" target="_blank"
-            >View Project on GitHub</a
-          >
+        <div class="about-content">
+          <div class="about-text">
+            <p class="highlight-text">
+              Hi, I'm a passionate full-stack developer specializing in building web applications
+              and automation solutions. With expertise in both front-end and back-end
+              development, I deliver optimized, scalable solutions to meet client needs.
+            </p>
+            <p>
+              I love working with modern technologies and frameworks, always staying up-to-date
+              with the latest trends in web development. My goal is to create beautiful,
+              functional, and user-friendly applications that make a difference.
+            </p>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+          </div>
         </div>
-        <div class="github-link">
-          <a href="https://cms.maciejbaba.dev" target="_blank"
-            >Open App in New Tab</a
-          >
+      </section>
+
+      <section id="skills" class="glass-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-number">02.</span>
+            Skills & Technologies
+          </h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="category-title">Frontend</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-js-square"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-sass"></i>
+                <span>TypeScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="category-title">Backend</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-laravel"></i>
+                <span>Laravel</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-php"></i>
+                <span>PHP</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>MySQL</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-server"></i>
+                <span>REST APIs</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3 class="category-title">Tools & DevOps</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-docker"></i>
+                <span>Docker</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-cloud"></i>
+                <span>AWS</span>
+              </div>
+              <div class="skill-item">
+                <i class="fab fa-figma"></i>
+                <span>Figma</span>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-terminal"></i>
+                <span>CLI Tools</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="glass-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-number">03.</span>
+            Featured Projects
+          </h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- CMS Project -->
+          <div class="project-card featured">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/maciejbaba/cms" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://cms.maciejbaba.dev" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <iframe
+                src="https://cms.maciejbaba.dev"
+                loading="lazy"
+                title="CMS Project Preview"
+              ></iframe>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">CMS Project</h3>
+                <div class="project-status">Featured</div>
+              </div>
+              <p class="project-description">
+                A comprehensive Content Management System showcasing full-stack development skills.
+                Features Laravel backend, Filament admin panel, and React frontend with Inertia.js.
+              </p>
+              <div class="project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Seamless Laravel + React integration</li>
+                  <li>Modern admin panel with Filament</li>
+                  <li>Responsive UI with shadcn/ui</li>
+                  <li>Type-safe TypeScript development</li>
+                </ul>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Inertia.js</span>
+                <span class="tech-tag">PHP</span>
+              </div>
+              <div class="project-credentials">
+                <p><strong>Demo Login:</strong> test@admin.com / testtest</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sudoku Solver Project -->
+          <div class="project-card">
+            <div class="project-image">
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://github.com/your-github-username/sudoku-solver" target="_blank" class="project-link">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://sudoku-solver-teal.vercel.app/" target="_blank" class="project-link">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <iframe
+                src="https://sudoku-solver-teal.vercel.app/"
+                loading="lazy"
+                title="Sudoku Solver Preview"
+              ></iframe>
+            </div>
+            <div class="project-content">
+              <div class="project-header">
+                <h3 class="project-title">Sudoku Solver</h3>
+              </div>
+              <p class="project-description">
+                An interactive Sudoku solver using backtracking algorithm with visualization.
+                Features dark mode and responsive design for optimal user experience.
+              </p>
+              <div class="project-features">
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Backtracking algorithm visualization</li>
+                  <li>Responsive design for all devices</li>
+                  <li>Dark mode interface</li>
+                  <li>Real-time solving animation</li>
+                </ul>
+              </div>
+              <div class="tech-stack">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Algorithms</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="glass-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-number">04.</span>
+            Get In Touch
+          </h2>
+        </div>
+        <div class="contact-content">
+          <div class="contact-text">
+            <h3>Let's work together!</h3>
+            <p>
+              I'm always interested in new opportunities and exciting projects.
+              Whether you have a question or just want to say hi, feel free to reach out!
+            </p>
+          </div>
+          <div class="contact-methods">
+            <a href="mailto:me@maciejbaba.dev" class="contact-method">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">me@maciejbaba.dev</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/maciejbaba" target="_blank" class="contact-method">
+              <div class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="contact-info">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">Connect with me</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="github" class="glass-section">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-number">05.</span>
+            GitHub
+          </h2>
+        </div>
+        <div class="github-content">
+          <div class="github-stats">
+            <h3>Check out my code</h3>
+            <p>
+              Explore my repositories, contributions, and open-source projects on GitHub.
+              I believe in clean code, documentation, and collaborative development.
+            </p>
+            <a href="https://github.com/maciejbaba" target="_blank" class="cta-button">
+              <i class="fab fa-github"></i>
+              <span>Visit GitHub Profile</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="modern-footer">
+      <div class="footer-content">
+        <p>&copy; <span id="year"></span> Maciej Bąba. Crafted with ❤️ and modern web technologies.</p>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
-
-      <!-- Sudoku Solver Project -->
-      <div class="project">
-        <h3>Sudoku Solver</h3>
-        <p>
-          This is a sudoku solver written in JavaScript, using a backtracking
-          algorithm to solve sudoku puzzles. The algorithm is slowed down to
-          visualize the solving process.
-        </p>
-        <h4>Live Demo:</h4>
-        <div class="iframe-preview">
-          <iframe
-            src="https://sudoku-solver-teal.vercel.app/"
-            width="100%"
-            height="600"
-            style="border: none"
-          ></iframe>
-        </div>
-        <h4>Key Features:</h4>
-        <ul>
-          <li>Backtracking Algorithm for solving Sudoku puzzles</li>
-          <li>Responsive design for both desktop and mobile users</li>
-          <li>Dark Mode enabled by default for eye comfort</li>
-        </ul>
-        <h4>Tech Stack:</h4>
-        <p>HTML5, CSS3, JavaScript</p>
-        <h4>How it Works:</h4>
-        <p>
-          The backtracking algorithm tries possible configurations and
-          backtracks when a wrong configuration is found, making it effective
-          for complex problems like Sudoku.
-        </p>
-
-        <!-- Existing GitHub Link -->
-        <div class="github-link">
-          <a
-            href="https://github.com/your-github-username/sudoku-solver"
-            target="_blank"
-            >View Project on GitHub</a
-          >
-        </div>
-
-        <!-- New Additional Link to the App -->
-        <div class="github-link">
-          <a href="https://sudoku-solver-teal.vercel.app/" target="_blank"
-            >Open App in New Tab</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="contact-info">
-        Feel free to reach out me via email:
-        <strong>me@maciejbaba.dev</strong>
-      </p>
-    </section>
-
-    <section id="github">
-      <h2>GitHub</h2>
-      <div class="github-link">
-        <a href="https://github.com/maciejbaba" target="_blank"
-          >Visit my GitHub Profile</a
-        >
-      </div>
-    </section>
-
-    <footer>
-      <p>&copy; <span id="year"></span> Maciej Bąba. All rights reserved.</p>
     </footer>
   </body>
   <script src="script.js"></script>
